@@ -1,4 +1,4 @@
-import asyncio
+import time
 import uuid
 
 from fastapi import FastAPI, HTTPException, Request
@@ -32,6 +32,8 @@ def metrics():
 
 @app.post("/triage", response_model=TriageResponse)
 async def triage(ticket: Ticket, request: Request):
+    started_at = time.perf_counter()
+
     request_id = request.headers.get(
         "X-Request-ID",
         str(uuid.uuid4()),
@@ -40,13 +42,20 @@ async def triage(ticket: Ticket, request: Request):
     existing = store.get(ticket.id)
 
     if existing is not None:
+        duration_ms = round(
+            (time.perf_counter() - started_at) * 1000,
+            2,
+        )
+
         print(
             f"request_id={request_id} "
             f"path=/triage "
             f"status=200 "
+            f"duration_ms={duration_ms} "
             f"degraded=false "
             f"idempotent=true"
         )
+
         return existing
 
     try:
@@ -58,10 +67,16 @@ async def triage(ticket: Ticket, request: Request):
             result = degraded_ticket_response(ticket)
             store.save(ticket.id, result)
 
+            duration_ms = round(
+                (time.perf_counter() - started_at) * 1000,
+                2,
+            )
+
             print(
                 f"request_id={request_id} "
                 f"path=/triage "
                 f"status=200 "
+                f"duration_ms={duration_ms} "
                 f"degraded=true"
             )
 
@@ -69,10 +84,16 @@ async def triage(ticket: Ticket, request: Request):
 
         store.save(ticket.id, result)
 
+        duration_ms = round(
+            (time.perf_counter() - started_at) * 1000,
+            2,
+        )
+
         print(
             f"request_id={request_id} "
             f"path=/triage "
             f"status=200 "
+            f"duration_ms={duration_ms} "
             f"degraded=false"
         )
 
