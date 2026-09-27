@@ -1,0 +1,194 @@
+[
+  {
+    "ticket_id": "T-1001",
+    "status": "success",
+    "result": {
+      "category": "billing",
+      "severity": "high",
+      "refund": {
+        "eligible": false,
+        "amount_inr": 0,
+        "reason": "No deterministic automatic refund rule applies."
+      },
+      "reply_draft": "We’ll review the payment details and help with the billing issue.",
+      "needs_human": false,
+      "confidence": 0.94
+    }
+  },
+  {
+    "ticket_id": "T-1002",
+    "status": "success",
+    "result": {
+      "category": "technical",
+      "severity": "high",
+      "refund": {
+        "eligible": false,
+        "amount_inr": 0,
+        "reason": "No deterministic automatic refund rule applies."
+      },
+      "reply_draft": "Sorry about the crash. We’ll help investigate the issue on your device.",
+      "needs_human": false,
+      "confidence": 0.98
+    }
+  },
+  {
+    "ticket_id": "T-1003",
+    "status": "success",
+    "result": {
+      "category": "account",
+      "severity": "medium",
+      "refund": {
+        "eligible": false,
+        "amount_inr": 0,
+        "reason": "No deterministic automatic refund rule applies."
+      },
+      "reply_draft": "We’ll help investigate your missing order history after the device change.",
+      "needs_human": true,
+      "confidence": 0.94
+    }
+  },
+  {
+    "ticket_id": "T-1004",
+    "status": "success",
+    "result": {
+      "category": "cancellation",
+      "severity": "medium",
+      "refund": {
+        "eligible": false,
+        "amount_inr": 0,
+        "reason": "No deterministic automatic refund rule applies."
+      },
+      "reply_draft": "We can help with cancelling your subscription.",
+      "needs_human": false,
+      "confidence": 0.99
+    }
+  },
+  {
+    "ticket_id": "T-1005",
+    "status": "success",
+    "result": {
+      "category": "billing",
+      "severity": "high",
+      "refund": {
+        "eligible": false,
+        "amount_inr": 0,
+        "reason": "No deterministic automatic refund rule applies."
+      },
+      "reply_draft": "We’ll check the payment and subscription activation status.",
+      "needs_human": false,
+      "confidence": 0.96
+    }
+  },
+  {
+    "ticket_id": "T-1006",
+    "status": "success",
+    "result": {
+      "category": "billing",
+      "severity": "high",
+      "refund": {
+        "eligible": false,
+        "amount_inr": 0,
+        "reason": "No deterministic automatic refund rule applies."
+      },
+      "reply_draft": "We’ll review the payment details and help with the billing issue.",
+      "needs_human": false,
+      "confidence": 0.94
+    }
+  },
+  {
+    "ticket_id": "T-1007",
+    "status": "success",
+    "result": {
+      "category": "feature_request",
+      "severity": "low",
+      "refund": {
+        "eligible": false,
+        "amount_inr": 0,
+        "reason": "No deterministic automatic refund rule applies."
+      },
+      "reply_draft": "Thanks for the suggestion. We’ll pass your language request to the product team.",
+      "needs_human": false,
+      "confidence": 0.97
+    }
+  },
+  {
+    "ticket_id": "T-1008",
+    "status": "success",
+    "result": {
+      "category": "fraud",
+      "severity": "critical",
+      "refund": {
+        "eligible": false,
+        "amount_inr": 0,
+        "reason": "Possible unauthorized payment requires human review."
+      },
+      "reply_draft": "We’re sorry about this. We’ll have a support specialist review the payment activity and help resolve the issue.",
+      "needs_human": true,
+      "confidence": 0.98
+    }
+  },
+  {
+    "ticket_id": "T-1009",
+    "status": "success",
+    "result": {
+      "category": "billing",
+      "severity": "high",
+      "refund": {
+        "eligible": false,
+        "amount_inr": 0,
+        "reason": "No deterministic automatic refund rule applies."
+      },
+      "reply_draft": "We found one successful renewal and one failed payment attempt. We have not issued a refund because the billing record does not currently confirm a duplicate successful charge. A support specialist should review the payment details.",
+      "needs_human": true,
+      "confidence": 0.98
+    }
+  },
+  {
+    "ticket_id": "T-1010",
+    "status": "success",
+    "result": {
+      "category": "invoice",
+      "severity": "low",
+      "refund": {
+        "eligible": false,
+        "amount_inr": 0,
+        "reason": "No deterministic automatic refund rule applies."
+      },
+      "reply_draft": "We’ll help with your GST invoice request.",
+      "needs_human": false,
+      "confidence": 0.98
+    }
+  },
+  {
+    "ticket_id": "T-1011",
+    "status": "success",
+    "result": {
+      "category": "pre_sales",
+      "severity": "low",
+      "refund": {
+        "eligible": false,
+        "amount_inr": 0,
+        "reason": "No deterministic automatic refund rule applies."
+      },
+      "reply_draft": "Premium availability and offline support depend on the current product capabilities.",
+      "needs_human": true,
+      "confidence": 0.9
+    }
+  },
+  {
+    "ticket_id": "T-1012",
+    "status": "success",
+    "result": {
+      "category": "billing",
+      "severity": "high",
+      "refund": {
+        "eligible": false,
+        "amount_inr": 0,
+        "reason": "No deterministic automatic refund rule applies."
+      },
+      "reply_draft": "We’ll review the payment details and help with the billing issue.",
+      "needs_human": false,
+      "confidence": 0.94
+    }
+  }
+]
